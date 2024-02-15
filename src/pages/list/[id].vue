@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { OutList } from '~/db'
 import type { PreviewList } from './index.vue';
 
 definePageMeta({
@@ -29,6 +28,3 @@ db.value.query<[PreviewList]>('SELECT * FROM ONLY $list', {
   <List v-if="!loading" :list="list!" />
 </div>
 </template>
-
-<style scoped>
-</style>
